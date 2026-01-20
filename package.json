@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@budibase/types": "^2.0.13",
+    "mqtt": "^5.3.4",
     "node-fetch": "^2"
   },
   "devDependencies": {

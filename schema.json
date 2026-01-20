@@ -2,24 +2,53 @@
   "type": "automation",
   "metadata": {},
   "schema": {
-    "name": "bb_super_mqtt",
+    "name": "MQTT Publisher",
     "tagline": "Publish MQTT message",
     "icon": "EmailOutline",
-    "description": "An MQTT Publish message Automation for Budibase",
+    "description": "An MQTT Publish message Automation for Budibase using TCP or WebSocket connection",
     "type": "action",
     "stepId": "bb_super_mqtt",
-    "inputs": {
-      "text": ""
-    },
     "schema": {
       "inputs": {
         "properties": {
-          "text": {
+          "host": {
             "type": "string",
-            "title": "Log"
+            "title": "Host",
+            "description": "MQTT broker hostname or IP address"
+          },
+          "port": {
+            "type": "number",
+            "title": "Port",
+            "description": "MQTT broker port"
+          },
+          "protocol": {
+            "type": "string",
+            "title": "Protocol",
+            "description": "Connection protocol (TCP or WebSocket)",
+            "enum": ["tcp", "ws"]
+          },
+          "username": {
+            "type": "string",
+            "title": "Username",
+            "description": "MQTT broker username (optional)"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password",
+            "description": "MQTT broker password (optional)"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic",
+            "description": "MQTT topic to publish the message to"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "description": "Message payload to publish"
           }
         },
-        "required": ["text"]
+        "required": ["host", "port", "protocol", "topic", "message"]
       },
       "outputs": {
         "properties": {
