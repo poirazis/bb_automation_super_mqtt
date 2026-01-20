@@ -1,7 +1,8 @@
 {
-  "name": "bb_super_mqtt",
+  "name": "bb_automation_super_mqtt",
   "version": "1.0.0",
-  "description": "An amazing Budibase automation!",
+  "description": "MQTT automation for Budibase",
+  "author": "Michael Poirazi",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
@@ -10,8 +11,7 @@
   },
   "dependencies": {
     "@budibase/types": "^2.0.13",
-    "mqtt": "^5.3.4",
-    "node-fetch": "^2"
+    "mqtt": "^5.3.4"
   },
   "devDependencies": {
     "@budibase/backend-core": "^2.0.13",

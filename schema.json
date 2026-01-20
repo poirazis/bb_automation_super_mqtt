@@ -7,7 +7,7 @@
     "icon": "EmailOutline",
     "description": "An MQTT Publish message Automation for Budibase using TCP or WebSocket connection",
     "type": "action",
-    "stepId": "bb_super_mqtt",
+    "stepId": "bb_automation_super_mqtt",
     "schema": {
       "inputs": {
         "properties": {
