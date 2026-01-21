@@ -25,7 +25,7 @@
             "type": "string",
             "title": "Protocol",
             "description": "Connection protocol (TCP or WebSocket)",
-            "enum": ["tcp", "ws"]
+            "enum": ["wss", "ws", "tcp"]
           },
           "username": {
             "type": "string",

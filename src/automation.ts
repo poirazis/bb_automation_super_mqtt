@@ -16,14 +16,6 @@ export default async function run({
       };
     }
 
-    // Validate protocol
-    if (protocol !== "tcp" && protocol !== "ws") {
-      return {
-        success: false,
-        message: "Protocol must be either 'tcp' or 'ws'",
-      };
-    }
-
     // Construct the connection URL based on protocol
     const url = `${protocol}://${host}:${port}`;
 
@@ -57,8 +49,6 @@ export default async function run({
       }, 30000); // 30 second timeout
 
       client.on("connect", () => {
-        console.log(`Connected to MQTT broker at ${url}`);
-
         // Publish the message
         client.publish(topic, message, { qos: 1 }, (err: any) => {
           clearTimeout(timeout);
